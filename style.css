@@ -1,0 +1,224 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+:root{
+    --text-color: #fff;
+    --btn-color: hsl(221, 14%, 31%);
+
+    --main-bg: hsl(222, 26%, 31%);
+    --toggle-bg: hsl(223, 31%, 20%);
+    --screen-bg: hsl(224, 36%, 15%);
+
+    --key-bg:hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+
+    --equal-btn:hsl(6, 63%, 50%);
+    --equal-shadow: hsl(6, 70%, 34%);
+
+    --option-btn: hsl(225, 21%, 49%);
+    --option-shadow: hsl(224, 28%, 35%);
+}
+:root.theme-two{
+    --text-color: #000;
+    --btn-color: hsl(221, 14%, 31%);
+
+    --main-bg: hsl(0, 0%, 90%);
+    --toggle-bg: hsl(0, 5%, 81%);
+    --screen-bg:  hsl(0, 0%, 93%);
+
+    --key-bg:hsl(45, 7%, 89%);
+    --key-shadow: hsl(35, 11%, 61%);
+
+    --equal-btn: hsl(25, 98%, 40%);
+    --equal-shadow: hsl(25, 99%, 27%);
+
+    --option-btn: hsl(185, 42%, 37%);
+    --option-shadow: hsl(185, 58%, 25%);
+}
+:root.theme-three{
+    --text-color: hsl(52, 100%, 62%);
+    --btn-color: hsl(52, 100%, 62%);
+
+    --main-bg: hsl(268, 75%, 9%);
+    --toggle-bg: hsl(268, 71%, 12%);
+    --screen-bg:  hsl(268, 71%, 12%);
+
+    --key-bg:hsl(268, 47%, 21%);
+    --key-shadow: hsl(290, 70%, 36%);
+
+    --equal-btn: hsl(176, 100%, 44%);
+    --equal-shadow: hsl(177, 92%, 70%);
+
+    --option-btn: hsl(281, 89%, 26%);
+    --option-shadow: hsl(285, 91%, 52%);
+}
+:root.theme-three .calc-btn.bg-blue{
+    color: #fff;
+}
+:root.theme-three .calc-btn.bg-red{
+    color: #000;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+html{
+    font-family: 'Spartan', sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-bg);
+    transition: 0.2s ease;
+}
+h1{
+    color: var(--main-background);
+}
+.calc{
+    max-width: 375px;
+    width: 100%;
+    padding: 25px;
+    
+}
+.calc-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.calc-title{
+    color: var(--text-color);
+    font-size: 30px;
+}
+.calc-theme{
+    display: flex;
+    align-items: flex-end;
+}
+.calc-theme h4{
+    color: var(--text-color);
+    font-size: 13px;
+    text-transform: uppercase;
+
+}
+.calc-toggle{
+    margin-left: 15px;
+}
+.theme-number{
+    font-size: 12px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-around;
+}
+.toggle-btn{
+    width: 70px;
+    height: 25px;
+    background-color: var(--toggle-bg);
+    border-radius: 999px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.2 ease;
+}
+.indicator{
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: var(--equal-btn);
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    bottom: 3px;
+    pointer-events: none;
+    transition: all 0.2 ease;
+}
+.toggle-btn > div{
+    width: 33.33%;
+    cursor: pointer;
+}
+
+
+.calc-screen{
+    background-color: var(--screen-bg);
+    height: 90px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+.calc-screen input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    font-size: 45px;
+    padding-right: 25px;
+    text-align-last: right;
+    user-select: none;
+}
+
+
+.calc-control{
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr );
+    grid-gap: 12px;
+    grid-row-gap: 17px;
+    background-color: var(--toggle-bg);
+    border-radius: 8px;
+}
+.calc-btn{
+    background-color: var(--key-shadow);
+    color: var(--btn-color);
+    height: 60px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    user-select: none;
+    
+}
+.calc-btn .front{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--key-bg);
+    transform: translateY(-4px);
+    transition: 0.2s ease;
+}
+.calc-btn:active .front{
+    transform: translateY(-1px);
+}
+
+
+.calc-btn.two-col{
+    grid-column: 2 span;
+}
+.calc-btn.bg-red{
+    color: var(--text-color);
+    background-color: var(--equal-shadow);
+    font-size: 24px;
+    
+}
+.calc-btn.bg-red .front{
+    background-color: var(--equal-btn);
+}
+.calc-btn.bg-blue .front{
+    background-color: var(--option-btn);
+}
+.calc-btn.bg-blue{
+    color: var(--text-color);
+    background-color: var(--option-shadow);
+    font-size: 20px;
+}

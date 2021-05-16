@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Calculator app</title>
+
+
+</head>
+<body>
+  <div class="calc">
+    <div class="calc-top">
+      <div class="calc-title">calc</div>
+      <div class="calc-theme">
+        <h4>theme</h4>
+        <div class="calc-toggle">
+          <div class="theme-number"><span>1</span><span>2</span><span>3</span></div>
+          <div class="toggle-btn">
+            <span class="indicator"></span>
+            <div class="theme-1" onclick="changeTheme('theme-one')"></div>
+            <div class="theme-2" onclick="changeTheme('theme-two')"></div>
+            <div class="theme-3" onclick="changeTheme('theme-three')"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calc-screen">
+      <input type="text" class="calc-input" readonly >
+    </div>
+    <div class="calc-control">
+      <button class="calc-btn" onclick="btnClicked('7')"><span class="front">7</span> </button>
+      <button class="calc-btn" onclick="btnClicked('8')"><span class="front">8</span></button>
+      <button class="calc-btn" onclick="btnClicked('9')"><span class="front">9</span></button>
+      <button class="calc-btn bg-blue" onclick="delBtnClicked()"><span class="front">del</span></button>
+      <button class="calc-btn" onclick="btnClicked('4')"><span class="front">4</span></button>
+      <button class="calc-btn" onclick="btnClicked('5')"><span class="front">5</span></button>
+      <button class="calc-btn" onclick="btnClicked('6')"><span class="front">6</span></button>
+      <button class="calc-btn" onclick="btnClicked('+')"><span class="front">+</span></button>
+      <button class="calc-btn" onclick="btnClicked('1')"><span class="front">1</span></button>
+      <button class="calc-btn" onclick="btnClicked('2')"><span class="front">2</span></button>
+      <button class="calc-btn" onclick="btnClicked('3')"><span class="front">3</span></button>
+      <button class="calc-btn" onclick="btnClicked('-')"><span class="front">-</span></button>
+      <button class="calc-btn" onclick="btnClicked('.')"><span class="front">.</span></button>
+      <button class="calc-btn" onclick="btnClicked('0')"><span class="front">0</span></button>
+      <button class="calc-btn" onclick="btnClicked('/')"><span class="front">/</span></button>
+      <button class="calc-btn" onclick="btnClicked('*')"><span class="front">*</span></button>
+      <button class="calc-btn two-col bg-blue" onclick="resetBtnClicked()"><span class="front">reset</span></button>
+      <button class="calc-btn two-col bg-red" onclick="equalBtnClicked()"><span class="front">=</span></button>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
